@@ -22,17 +22,20 @@ Partial Class Form
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -64,25 +67,25 @@ Partial Class Form
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Button16 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -172,6 +175,9 @@ Partial Class Form
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage3.Controls.Add(Me.Label20)
+        Me.TabPage3.Controls.Add(Me.TextBox16)
+        Me.TabPage3.Controls.Add(Me.Label19)
         Me.TabPage3.Controls.Add(Me.TextBox15)
         Me.TabPage3.Controls.Add(Me.ListBox1)
         Me.TabPage3.Controls.Add(Me.Label18)
@@ -183,9 +189,34 @@ Partial Class Form
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Setup"
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(372, 55)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(71, 15)
+        Me.Label20.TabIndex = 7
+        Me.Label20.Text = "*500 ms "
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Location = New System.Drawing.Point(322, 52)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(44, 25)
+        Me.TextBox16.TabIndex = 6
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(314, 19)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(215, 15)
+        Me.Label19.TabIndex = 5
+        Me.Label19.Text = "Solenoid Valves Flash Time"
+        '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(654, 19)
+        Me.TextBox15.Location = New System.Drawing.Point(701, 311)
         Me.TextBox15.Multiline = True
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(543, 43)
@@ -195,7 +226,7 @@ Partial Class Form
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(41, 176)
+        Me.ListBox1.Location = New System.Drawing.Point(41, 47)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(180, 169)
         Me.ListBox1.TabIndex = 3
@@ -203,7 +234,7 @@ Partial Class Form
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(38, 135)
+        Me.Label18.Location = New System.Drawing.Point(38, 19)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(183, 15)
         Me.Label18.TabIndex = 2
@@ -211,7 +242,7 @@ Partial Class Form
         '
         'Button24
         '
-        Me.Button24.Location = New System.Drawing.Point(41, 19)
+        Me.Button24.Location = New System.Drawing.Point(41, 311)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(556, 43)
         Me.Button24.TabIndex = 1
@@ -258,16 +289,16 @@ Partial Class Form
         '
         'Chart3
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend4)
+        ChartArea7.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea7)
+        Legend7.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend7)
         Me.Chart3.Location = New System.Drawing.Point(855, 39)
         Me.Chart3.Name = "Chart3"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        Me.Chart3.Series.Add(Series4)
+        Series7.ChartArea = "ChartArea1"
+        Series7.Legend = "Legend1"
+        Series7.Name = "Series1"
+        Me.Chart3.Series.Add(Series7)
         Me.Chart3.Size = New System.Drawing.Size(356, 256)
         Me.Chart3.TabIndex = 13
         Me.Chart3.Text = "Chart3"
@@ -283,16 +314,16 @@ Partial Class Form
         '
         'Chart2
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend5)
+        ChartArea8.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea8)
+        Legend8.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend8)
         Me.Chart2.Location = New System.Drawing.Point(451, 39)
         Me.Chart2.Name = "Chart2"
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Me.Chart2.Series.Add(Series5)
+        Series8.ChartArea = "ChartArea1"
+        Series8.Legend = "Legend1"
+        Series8.Name = "Series1"
+        Me.Chart2.Series.Add(Series8)
         Me.Chart2.Size = New System.Drawing.Size(356, 256)
         Me.Chart2.TabIndex = 11
         Me.Chart2.Text = "Chart2"
@@ -308,16 +339,16 @@ Partial Class Form
         '
         'Chart1
         '
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend6)
+        ChartArea9.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea9)
+        Legend9.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend9)
         Me.Chart1.Location = New System.Drawing.Point(32, 39)
         Me.Chart1.Name = "Chart1"
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series1"
-        Me.Chart1.Series.Add(Series6)
+        Series9.ChartArea = "ChartArea1"
+        Series9.Legend = "Legend1"
+        Series9.Name = "Series1"
+        Me.Chart1.Series.Add(Series9)
         Me.Chart1.Size = New System.Drawing.Size(356, 256)
         Me.Chart1.TabIndex = 1
         Me.Chart1.Text = "Chart1"
@@ -494,39 +525,39 @@ Partial Class Form
         '
         'Panel10
         '
-        Me.Panel10.Controls.Add(Me.Button14)
-        Me.Panel10.Controls.Add(Me.Button15)
-        Me.Panel10.Controls.Add(Me.TextBox10)
+        Me.Panel10.Controls.Add(Me.Button17)
+        Me.Panel10.Controls.Add(Me.TextBox11)
+        Me.Panel10.Controls.Add(Me.Button16)
         Me.Panel10.Controls.Add(Me.Label10)
         Me.Panel10.Location = New System.Drawing.Point(297, 24)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(285, 48)
         Me.Panel10.TabIndex = 14
         '
-        'Button14
+        'Button17
         '
-        Me.Button14.Location = New System.Drawing.Point(198, 3)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(78, 28)
-        Me.Button14.TabIndex = 9
-        Me.Button14.Text = "Click"
-        Me.Button14.UseVisualStyleBackColor = True
+        Me.Button17.Location = New System.Drawing.Point(204, 4)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(78, 28)
+        Me.Button17.TabIndex = 8
+        Me.Button17.Text = "Flash"
+        Me.Button17.UseVisualStyleBackColor = True
         '
-        'Button15
+        'TextBox11
         '
-        Me.Button15.Location = New System.Drawing.Point(114, 3)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(78, 28)
-        Me.Button15.TabIndex = 8
-        Me.Button15.Text = "On/Off"
-        Me.Button15.UseVisualStyleBackColor = True
+        Me.TextBox11.Location = New System.Drawing.Point(56, 8)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(52, 25)
+        Me.TextBox11.TabIndex = 7
         '
-        'TextBox10
+        'Button16
         '
-        Me.TextBox10.Location = New System.Drawing.Point(56, 4)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(52, 25)
-        Me.TextBox10.TabIndex = 7
+        Me.Button16.Location = New System.Drawing.Point(120, 4)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(78, 28)
+        Me.Button16.TabIndex = 9
+        Me.Button16.Text = "On/Off"
+        Me.Button16.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -539,39 +570,39 @@ Partial Class Form
         '
         'Panel11
         '
-        Me.Panel11.Controls.Add(Me.Button16)
-        Me.Panel11.Controls.Add(Me.Button17)
-        Me.Panel11.Controls.Add(Me.TextBox11)
+        Me.Panel11.Controls.Add(Me.TextBox10)
+        Me.Panel11.Controls.Add(Me.Button15)
+        Me.Panel11.Controls.Add(Me.Button14)
         Me.Panel11.Controls.Add(Me.Label11)
         Me.Panel11.Location = New System.Drawing.Point(6, 24)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(285, 48)
         Me.Panel11.TabIndex = 13
         '
-        'Button16
+        'TextBox10
         '
-        Me.Button16.Location = New System.Drawing.Point(198, 3)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(78, 28)
-        Me.Button16.TabIndex = 9
-        Me.Button16.Text = "Click"
-        Me.Button16.UseVisualStyleBackColor = True
+        Me.TextBox10.Location = New System.Drawing.Point(56, 6)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(52, 25)
+        Me.TextBox10.TabIndex = 7
         '
-        'Button17
+        'Button15
         '
-        Me.Button17.Location = New System.Drawing.Point(114, 3)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(78, 28)
-        Me.Button17.TabIndex = 8
-        Me.Button17.Text = "On/Off"
-        Me.Button17.UseVisualStyleBackColor = True
+        Me.Button15.Location = New System.Drawing.Point(204, 4)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(78, 28)
+        Me.Button15.TabIndex = 8
+        Me.Button15.Text = "Flash"
+        Me.Button15.UseVisualStyleBackColor = True
         '
-        'TextBox11
+        'Button14
         '
-        Me.TextBox11.Location = New System.Drawing.Point(56, 4)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(52, 25)
-        Me.TextBox11.TabIndex = 7
+        Me.Button14.Location = New System.Drawing.Point(120, 3)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(78, 28)
+        Me.Button14.TabIndex = 9
+        Me.Button14.Text = "On/Off"
+        Me.Button14.UseVisualStyleBackColor = True
         '
         'Label11
         '
@@ -595,39 +626,32 @@ Partial Class Form
         '
         'Panel8
         '
-        Me.Panel8.Controls.Add(Me.Button10)
-        Me.Panel8.Controls.Add(Me.Button11)
-        Me.Panel8.Controls.Add(Me.TextBox8)
+        Me.Panel8.Controls.Add(Me.Button12)
+        Me.Panel8.Controls.Add(Me.Button13)
         Me.Panel8.Controls.Add(Me.Label8)
+        Me.Panel8.Controls.Add(Me.TextBox9)
         Me.Panel8.Location = New System.Drawing.Point(297, 27)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(285, 48)
         Me.Panel8.TabIndex = 14
         '
-        'Button10
+        'Button12
         '
-        Me.Button10.Location = New System.Drawing.Point(198, 3)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(78, 28)
-        Me.Button10.TabIndex = 9
-        Me.Button10.Text = "Click"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.Button12.Location = New System.Drawing.Point(114, 3)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(78, 28)
+        Me.Button12.TabIndex = 9
+        Me.Button12.Text = "On/Off"
+        Me.Button12.UseVisualStyleBackColor = True
         '
-        'Button11
+        'Button13
         '
-        Me.Button11.Location = New System.Drawing.Point(114, 3)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(78, 28)
-        Me.Button11.TabIndex = 8
-        Me.Button11.Text = "On/Off"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(56, 4)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(52, 25)
-        Me.TextBox8.TabIndex = 7
+        Me.Button13.Location = New System.Drawing.Point(198, 3)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(78, 28)
+        Me.Button13.TabIndex = 8
+        Me.Button13.Text = "Flash"
+        Me.Button13.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -638,41 +662,48 @@ Partial Class Form
         Me.Label8.TabIndex = 6
         Me.Label8.Text = "Base"
         '
-        'Panel9
-        '
-        Me.Panel9.Controls.Add(Me.Button12)
-        Me.Panel9.Controls.Add(Me.Button13)
-        Me.Panel9.Controls.Add(Me.TextBox9)
-        Me.Panel9.Controls.Add(Me.Label9)
-        Me.Panel9.Location = New System.Drawing.Point(6, 27)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(285, 48)
-        Me.Panel9.TabIndex = 13
-        '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(198, 3)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(78, 28)
-        Me.Button12.TabIndex = 9
-        Me.Button12.Text = "Click"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(114, 3)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(78, 28)
-        Me.Button13.TabIndex = 8
-        Me.Button13.Text = "On/Off"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
         'TextBox9
         '
         Me.TextBox9.Location = New System.Drawing.Point(56, 4)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(52, 25)
         Me.TextBox9.TabIndex = 7
+        '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.Button11)
+        Me.Panel9.Controls.Add(Me.TextBox8)
+        Me.Panel9.Controls.Add(Me.Button10)
+        Me.Panel9.Controls.Add(Me.Label9)
+        Me.Panel9.Location = New System.Drawing.Point(6, 27)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(285, 48)
+        Me.Panel9.TabIndex = 13
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(198, 3)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(78, 28)
+        Me.Button11.TabIndex = 8
+        Me.Button11.Text = "Flash"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(56, 4)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(52, 25)
+        Me.TextBox8.TabIndex = 7
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(114, 3)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(78, 28)
+        Me.Button10.TabIndex = 9
+        Me.Button10.Text = "On/Off"
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -707,20 +738,20 @@ Partial Class Form
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(198, 3)
+        Me.Button8.Location = New System.Drawing.Point(114, 4)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(78, 28)
         Me.Button8.TabIndex = 9
-        Me.Button8.Text = "Click"
+        Me.Button8.Text = "On/Off"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(114, 3)
+        Me.Button9.Location = New System.Drawing.Point(198, 4)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(78, 28)
         Me.Button9.TabIndex = 8
-        Me.Button9.Text = "On/Off"
+        Me.Button9.Text = "Flash"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'TextBox7
@@ -756,7 +787,7 @@ Partial Class Form
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(78, 28)
         Me.Button7.TabIndex = 9
-        Me.Button7.Text = "Click"
+        Me.Button7.Text = "Flash"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button6
@@ -1179,4 +1210,7 @@ Partial Class Form
     Friend WithEvents Label18 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents Label19 As Label
 End Class

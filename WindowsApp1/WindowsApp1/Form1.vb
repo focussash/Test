@@ -31,6 +31,7 @@ Public Class Form
         TextBox15.Text = "Not initialized!"
     End Sub
 
+    'Buttons 1 - 5 are for pumps'
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If (Pump1.State = 0) Then
             Pump1.State += 1
@@ -155,6 +156,56 @@ Public Class Form
         End Try
         TextBox5.Text = "Digital" & ", " & Pump5.StateStr
     End Sub
+    'Buttons 1 - 5 are for pumps'
+
+    'Buttons 6 - 17 are for solenoid valves'
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click 'Stomach Acid, On/Off'
+        If (Valve1.State = 0) Then
+            Valve1.State += 1
+        Else
+            Valve1.State *= 0
+        End If
+
+        If (Valve1.State = 1) Then
+            Valve1.StateStr = "On"
+        Else
+            Valve1.StateStr = "Off"
+        End If
+
+        Try
+            ListBox1.SetSelected(0, True)
+            com(0) = My.Computer.Ports.OpenSerialPort(ListBox1.SelectedItem.ToString)
+            com(0).WriteLine(Valve1.State.ToString & "2011") ' The 2,01,1 here indicates that this is a valve(2) numbered 01 with digital control （1）
+            ListBox1.SetSelected(0, False)
+            com(0).Close()
+        Catch
+        End Try
+        TextBox6.Text = Valve1.StateStr
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click 'Stomach Acid, flash'
+        If (Valve1.State = 0) Then
+            Try
+                ListBox1.SetSelected(0, True)
+                com(0) = My.Computer.Ports.OpenSerialPort(ListBox1.SelectedItem.ToString)
+                com(0).WriteLine(TextBox16.Text.ToString & "2012") ' The 2,01,1 here indicates that this is a valve(2) numbered 01 with flash control (2)
+                ListBox1.SetSelected(0, False)
+                com(0).Close()
+            Catch
+            End Try
+            Valve1.StateStr = CDbl(TextBox16.Text) * 0.5
+            TextBox6.Text = Valve1.StateStr & "s"
+        Else
+            MsgBox("Valve already on!")
+        End If
+    End Sub
+
+
+
+
+
+
+
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click 'Initialize!'
         'Confirm that the form is initialized'
@@ -305,7 +356,26 @@ Public Class Form
             MsgBox("Pump not on!")
             TrackBar5.Value = 0
         End If
+
     End Sub
 
+    Private Sub TextBox16_LostFocus(sender As Object, e As EventArgs) Handles TextBox16.LostFocus
+        'Check if the input number is between 0 - 9
+        Try
+            If (CInt(TextBox16.Text) > 9 Or CInt(TextBox16.Text) < 0) Then
+                MsgBox("Flash time should be a number between 0 to 9!")
+                TextBox16.Text = ""
+                Me.ActiveControl = TextBox16
+            End If
+        Catch
+            If (Not TextBox16.Text = "") Then
+                MsgBox("That...was not a number...")
+                TextBox16.Text = ""
+                Me.ActiveControl = TextBox16
+            Else
+                TextBox16.Text = "0"
+            End If
+        End Try
+    End Sub
 End Class
 

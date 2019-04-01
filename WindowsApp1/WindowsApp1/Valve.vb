@@ -3,7 +3,7 @@
 
 
     Public Property Name As String
-    Public Property State As Boolean
-
+    Public Property State As Integer
+    Public Property StateStr As String
 
 End Class
