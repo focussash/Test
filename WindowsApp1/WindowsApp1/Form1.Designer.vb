@@ -34,18 +34,26 @@ Partial Class Form
         Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.RandomTesting2 = New System.Windows.Forms.Button()
+        Me.Random_Testing = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.Sensor_Time_Interval = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.Valve_Flash_Time = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.comlist = New System.Windows.Forms.ListBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Button24 = New System.Windows.Forms.Button()
+        Me.Initialization = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.Button29 = New System.Windows.Forms.Button()
+        Me.Button28 = New System.Windows.Forms.Button()
         Me.Button27 = New System.Windows.Forms.Button()
         Me.Button26 = New System.Windows.Forms.Button()
         Me.Button25 = New System.Windows.Forms.Button()
@@ -137,9 +145,6 @@ Partial Class Form
         Me.ReadPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.ReadPort2 = New System.IO.Ports.SerialPort(Me.components)
         Me.ReadPort3 = New System.IO.Ports.SerialPort(Me.components)
-        Me.Button28 = New System.Windows.Forms.Button()
-        Me.Button29 = New System.Windows.Forms.Button()
-        Me.Button30 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -183,29 +188,49 @@ Partial Class Form
         Me.TabControl1.Location = New System.Drawing.Point(12, 41)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1302, 900)
+        Me.TabControl1.Size = New System.Drawing.Size(1302, 1011)
         Me.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.TabControl1.TabIndex = 0
         '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage3.Controls.Add(Me.RandomTesting2)
+        Me.TabPage3.Controls.Add(Me.Random_Testing)
         Me.TabPage3.Controls.Add(Me.Label22)
-        Me.TabPage3.Controls.Add(Me.TextBox17)
+        Me.TabPage3.Controls.Add(Me.Sensor_Time_Interval)
         Me.TabPage3.Controls.Add(Me.Label21)
         Me.TabPage3.Controls.Add(Me.Label20)
-        Me.TabPage3.Controls.Add(Me.TextBox16)
+        Me.TabPage3.Controls.Add(Me.Valve_Flash_Time)
         Me.TabPage3.Controls.Add(Me.Label19)
         Me.TabPage3.Controls.Add(Me.TextBox15)
         Me.TabPage3.Controls.Add(Me.comlist)
         Me.TabPage3.Controls.Add(Me.Label18)
-        Me.TabPage3.Controls.Add(Me.Button24)
+        Me.TabPage3.Controls.Add(Me.Initialization)
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1294, 871)
+        Me.TabPage3.Size = New System.Drawing.Size(1294, 982)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Setup"
+        '
+        'RandomTesting2
+        '
+        Me.RandomTesting2.Location = New System.Drawing.Point(1037, 24)
+        Me.RandomTesting2.Name = "RandomTesting2"
+        Me.RandomTesting2.Size = New System.Drawing.Size(177, 45)
+        Me.RandomTesting2.TabIndex = 12
+        Me.RandomTesting2.Text = "Random Testing 2"
+        Me.RandomTesting2.UseVisualStyleBackColor = True
+        '
+        'Random_Testing
+        '
+        Me.Random_Testing.Location = New System.Drawing.Point(834, 24)
+        Me.Random_Testing.Name = "Random_Testing"
+        Me.Random_Testing.Size = New System.Drawing.Size(176, 46)
+        Me.Random_Testing.TabIndex = 11
+        Me.Random_Testing.Text = "Random_Testing"
+        Me.Random_Testing.UseVisualStyleBackColor = True
         '
         'Label22
         '
@@ -216,12 +241,12 @@ Partial Class Form
         Me.Label22.TabIndex = 10
         Me.Label22.Text = "*100 ms "
         '
-        'TextBox17
+        'Sensor_Time_Interval
         '
-        Me.TextBox17.Location = New System.Drawing.Point(322, 125)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(44, 25)
-        Me.TextBox17.TabIndex = 9
+        Me.Sensor_Time_Interval.Location = New System.Drawing.Point(322, 125)
+        Me.Sensor_Time_Interval.Name = "Sensor_Time_Interval"
+        Me.Sensor_Time_Interval.Size = New System.Drawing.Size(44, 25)
+        Me.Sensor_Time_Interval.TabIndex = 9
         '
         'Label21
         '
@@ -241,12 +266,12 @@ Partial Class Form
         Me.Label20.TabIndex = 7
         Me.Label20.Text = "*500 ms "
         '
-        'TextBox16
+        'Valve_Flash_Time
         '
-        Me.TextBox16.Location = New System.Drawing.Point(322, 52)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(44, 25)
-        Me.TextBox16.TabIndex = 6
+        Me.Valve_Flash_Time.Location = New System.Drawing.Point(322, 52)
+        Me.Valve_Flash_Time.Name = "Valve_Flash_Time"
+        Me.Valve_Flash_Time.Size = New System.Drawing.Size(44, 25)
+        Me.Valve_Flash_Time.TabIndex = 6
         '
         'Label19
         '
@@ -283,14 +308,14 @@ Partial Class Form
         Me.Label18.TabIndex = 2
         Me.Label18.Text = "Connected Serial Ports"
         '
-        'Button24
+        'Initialization
         '
-        Me.Button24.Location = New System.Drawing.Point(41, 311)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(556, 43)
-        Me.Button24.TabIndex = 1
-        Me.Button24.Text = "Initialize!"
-        Me.Button24.UseVisualStyleBackColor = True
+        Me.Initialization.Location = New System.Drawing.Point(41, 311)
+        Me.Initialization.Name = "Initialization"
+        Me.Initialization.Size = New System.Drawing.Size(556, 43)
+        Me.Initialization.TabIndex = 1
+        Me.Initialization.Text = "Initialize!"
+        Me.Initialization.UseVisualStyleBackColor = True
         '
         'TabPage1
         '
@@ -302,12 +327,15 @@ Partial Class Form
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1294, 871)
+        Me.TabPage1.Size = New System.Drawing.Size(1294, 982)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Manual Control"
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.TextBox20)
+        Me.GroupBox4.Controls.Add(Me.TextBox19)
+        Me.GroupBox4.Controls.Add(Me.TextBox18)
         Me.GroupBox4.Controls.Add(Me.Button30)
         Me.GroupBox4.Controls.Add(Me.Button29)
         Me.GroupBox4.Controls.Add(Me.Button28)
@@ -322,14 +350,62 @@ Partial Class Form
         Me.GroupBox4.Controls.Add(Me.StomachPH)
         Me.GroupBox4.Location = New System.Drawing.Point(15, 296)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(1251, 380)
+        Me.GroupBox4.Size = New System.Drawing.Size(1251, 428)
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "PH Indicators"
         '
+        'TextBox20
+        '
+        Me.TextBox20.Location = New System.Drawing.Point(926, 336)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(267, 25)
+        Me.TextBox20.TabIndex = 23
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Location = New System.Drawing.Point(520, 336)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(267, 25)
+        Me.TextBox19.TabIndex = 22
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Location = New System.Drawing.Point(69, 336)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.Size = New System.Drawing.Size(267, 25)
+        Me.TextBox18.TabIndex = 21
+        '
+        'Button30
+        '
+        Me.Button30.Location = New System.Drawing.Point(1084, 367)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Size = New System.Drawing.Size(109, 27)
+        Me.Button30.TabIndex = 20
+        Me.Button30.Text = "Reset"
+        Me.Button30.UseVisualStyleBackColor = True
+        '
+        'Button29
+        '
+        Me.Button29.Location = New System.Drawing.Point(666, 367)
+        Me.Button29.Name = "Button29"
+        Me.Button29.Size = New System.Drawing.Size(109, 27)
+        Me.Button29.TabIndex = 19
+        Me.Button29.Text = "Reset"
+        Me.Button29.UseVisualStyleBackColor = True
+        '
+        'Button28
+        '
+        Me.Button28.Location = New System.Drawing.Point(221, 367)
+        Me.Button28.Name = "Button28"
+        Me.Button28.Size = New System.Drawing.Size(109, 27)
+        Me.Button28.TabIndex = 18
+        Me.Button28.Text = "Reset"
+        Me.Button28.UseVisualStyleBackColor = True
+        '
         'Button27
         '
-        Me.Button27.Location = New System.Drawing.Point(926, 336)
+        Me.Button27.Location = New System.Drawing.Point(940, 367)
         Me.Button27.Name = "Button27"
         Me.Button27.Size = New System.Drawing.Size(109, 27)
         Me.Button27.TabIndex = 17
@@ -338,7 +414,7 @@ Partial Class Form
         '
         'Button26
         '
-        Me.Button26.Location = New System.Drawing.Point(508, 336)
+        Me.Button26.Location = New System.Drawing.Point(531, 367)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(109, 27)
         Me.Button26.TabIndex = 16
@@ -347,7 +423,7 @@ Partial Class Form
         '
         'Button25
         '
-        Me.Button25.Location = New System.Drawing.Point(95, 336)
+        Me.Button25.Location = New System.Drawing.Point(78, 367)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(109, 27)
         Me.Button25.TabIndex = 15
@@ -377,7 +453,7 @@ Partial Class Form
         Series4.Legend = "Legend1"
         Series4.Name = "Series1"
         Me.ColonPH.Series.Add(Series4)
-        Me.ColonPH.Size = New System.Drawing.Size(356, 291)
+        Me.ColonPH.Size = New System.Drawing.Size(390, 291)
         Me.ColonPH.TabIndex = 13
         Me.ColonPH.Text = "Chart3"
         '
@@ -397,14 +473,14 @@ Partial Class Form
         Legend5.Enabled = False
         Legend5.Name = "Legend1"
         Me.SmallIntestinePH.Legends.Add(Legend5)
-        Me.SmallIntestinePH.Location = New System.Drawing.Point(451, 39)
+        Me.SmallIntestinePH.Location = New System.Drawing.Point(430, 39)
         Me.SmallIntestinePH.Name = "SmallIntestinePH"
         Series5.ChartArea = "ChartArea1"
         Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
         Series5.Legend = "Legend1"
         Series5.Name = "Series1"
         Me.SmallIntestinePH.Series.Add(Series5)
-        Me.SmallIntestinePH.Size = New System.Drawing.Size(356, 291)
+        Me.SmallIntestinePH.Size = New System.Drawing.Size(419, 291)
         Me.SmallIntestinePH.TabIndex = 11
         Me.SmallIntestinePH.Text = "Chart2"
         '
@@ -424,14 +500,14 @@ Partial Class Form
         Legend6.Enabled = False
         Legend6.Name = "Legend1"
         Me.StomachPH.Legends.Add(Legend6)
-        Me.StomachPH.Location = New System.Drawing.Point(32, 39)
+        Me.StomachPH.Location = New System.Drawing.Point(12, 39)
         Me.StomachPH.Name = "StomachPH"
         Series6.ChartArea = "ChartArea1"
         Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
         Series6.Legend = "Legend1"
         Series6.Name = "Series1"
         Me.StomachPH.Series.Add(Series6)
-        Me.StomachPH.Size = New System.Drawing.Size(356, 291)
+        Me.StomachPH.Size = New System.Drawing.Size(408, 291)
         Me.StomachPH.TabIndex = 1
         Me.StomachPH.Text = "Chart1"
         '
@@ -440,7 +516,7 @@ Partial Class Form
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Panel13)
         Me.GroupBox3.Controls.Add(Me.Panel12)
-        Me.GroupBox3.Location = New System.Drawing.Point(21, 682)
+        Me.GroupBox3.Location = New System.Drawing.Point(15, 730)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(465, 183)
         Me.GroupBox3.TabIndex = 2
@@ -1137,7 +1213,7 @@ Partial Class Form
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1294, 871)
+        Me.TabPage2.Size = New System.Drawing.Size(1294, 982)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Automatic Control"
         '
@@ -1146,38 +1222,11 @@ Partial Class Form
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
-        'Button28
-        '
-        Me.Button28.Location = New System.Drawing.Point(246, 336)
-        Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(109, 27)
-        Me.Button28.TabIndex = 18
-        Me.Button28.Text = "Reset"
-        Me.Button28.UseVisualStyleBackColor = True
-        '
-        'Button29
-        '
-        Me.Button29.Location = New System.Drawing.Point(666, 336)
-        Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(109, 27)
-        Me.Button29.TabIndex = 19
-        Me.Button29.Text = "Reset"
-        Me.Button29.UseVisualStyleBackColor = True
-        '
-        'Button30
-        '
-        Me.Button30.Location = New System.Drawing.Point(1068, 336)
-        Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(109, 27)
-        Me.Button30.TabIndex = 20
-        Me.Button30.Text = "Reset"
-        Me.Button30.UseVisualStyleBackColor = True
-        '
         'Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1326, 933)
+        Me.ClientSize = New System.Drawing.Size(1326, 1055)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form"
         Me.Text = "Your 1-stop control for GitBox"
@@ -1320,12 +1369,12 @@ Partial Class Form
     Friend WithEvents SmallIntestinePH As DataVisualization.Charting.Chart
     Friend WithEvents Label15 As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Button24 As Button
+    Friend WithEvents Initialization As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents comlist As ListBox
     Friend WithEvents TextBox15 As TextBox
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents Valve_Flash_Time As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents InputPort1 As IO.Ports.SerialPort
@@ -1336,9 +1385,14 @@ Partial Class Form
     Friend WithEvents Button26 As Button
     Friend WithEvents Button25 As Button
     Friend WithEvents Label22 As Label
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents Sensor_Time_Interval As TextBox
     Friend WithEvents Label21 As Label
     Friend WithEvents Button30 As Button
     Friend WithEvents Button29 As Button
     Friend WithEvents Button28 As Button
+    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents Random_Testing As Button
+    Friend WithEvents RandomTesting2 As Button
 End Class
