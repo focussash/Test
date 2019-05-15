@@ -1,0 +1,13 @@
+For output to Arduino:
+5 digits system:
+	1st digit tells whether or not the device is on:1 for on and 0 for off. If the device is under analog control, it can range from 1 to 9, detailing the percentage of intensity
+	2nd digit tells the type of device, 1 for pumps and 2 for solenoid valves
+	3rd and 4th digit tells the numbering of device, from 00 to 99
+	5th digit tells the control type of device, 1 for digital (ON/OFF) control and 2 for analog (11% to 99% power) control
+
+For reading from Arduino (PH sensors):
+You need to change the function PH_Calculations;
+	This function reads an analog signal (from 0 to 1023) and converts it to PH which is then displayed into the charts
+The reading from Arduino needs to be 5 digits:
+	1st digit details which sensor this is (0-9)
+	2,3,4,5 digits are the analog signal (0-1023)
