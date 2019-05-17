@@ -28,7 +28,7 @@ void setup() {
 
 void loop() {
   // clear all the input caches and variables
-  for (i = 0;i<6;i++)
+  for (i = 0;i<5;i++)
   {
     instring[i] = ""; 
   }
@@ -39,17 +39,19 @@ void loop() {
 
   if (Serial.available()>0){
   Serial.readBytesUntil("\r",instring,5);
-  }
-  if ((int)instring[3]-48>0){ //check if the signal is valid?
-    for (i = 0;i<6;i++)
+  if ((int)instring[3]>48){ //check if the signal is valid?
+    for (i = 0;i<5;i++)
     {
-      instring_int[i] = (int)instring[i] - 48; //parse the input data into 5 integer (-48 is to convert ascii to integer)
+      instring_int[i] = (int)instring[i]-48; //parse the input data into 5 integer; the -48 is to convert the ascii number into integer
+      Serial.print(instring_int[i]);
     }
+    Serial.println("");
     device_number = instring_int[2]*10+ instring_int[3];
     device_type = instring_int[1];
     control_type = instring_int[4];
     device_intensity = instring_int[0];
   } 
+  
   switch (device_type){
     case 1://if its a pump
       for (k=1;k<6;k++){
@@ -102,4 +104,6 @@ void loop() {
 
     break;
  }
+ delay(50);
+  }
  }

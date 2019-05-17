@@ -34,6 +34,8 @@ Public Class Form
     Dim SensorNumber As Integer = 1
     Dim ArduinoReading As String ' This is the immediate reading (including sensor handle) from Arduino
     Dim VoltageReading As Integer ' This is the actual voltage reading from Arduino
+    Dim tick As Integer = 0 'For timer 1'
+    Dim tick2 As Integer = 0 'for timer 2'
     'Random stuff for troubleshooting'
     Dim a As Integer
 
@@ -235,21 +237,18 @@ Public Class Form
         'Now, because I was stupid and didn't know these ports object exist...'
         'I only have limited amount of port objects, so lets manually assign them'
         Try
-            comlist.SetSelected(0, True)
-            ReadPort1 = My.Computer.Ports.OpenSerialPort(comlist.SelectedItem.ToString)
-            'Add further ports here'
-            comlist.SetSelected(1, True)
-            OutputPort1 = My.Computer.Ports.OpenSerialPort(comlist.SelectedItem.ToString)
+            ReadPort1 = My.Computer.Ports.OpenSerialPort("COM6")
+            OutputPort1 = My.Computer.Ports.OpenSerialPort("COM4")
+            'Add further ports here, this better be done manually because ports aren't always loaded in the same order'
+            InitializeStatus += 1 'Check if this is initialization, or update
+            'Confirm that the form is initialized'
+            If InitializeStatus = 1 Then
+                TextBox15.Text = "Initialized!"
+                Initialization.Text = "Initialized, don't click again!"
+            End If
         Catch 'if someone clicked it twice, remove the extra instances of port
             MsgBox("Initialization Error!" & vbCrLf & "Restart the program!")
         End Try
-
-        InitializeStatus += 1 'Check if this is initialization, or update
-        'Confirm that the form is initialized'
-        If InitializeStatus = 1 Then
-            TextBox15.Text = "Initialized!"
-            Initialization.Text = "Initialized, don't click again!"
-        End If
     End Sub
 
 
@@ -292,38 +291,80 @@ Public Class Form
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Working for now, but Readports need to be adjusted'
-        Dim tick As Integer = 0 'For counting when to clear buffer
+        'This timer deals with reading voltage from PH sensors and plotting them etc'
         tick += 1
         If InitializeStatus = 1 Then
             Try
                 If IsNumeric(ReadPort1.ReadLine.ToString) = True Then
-                    ArduinoReading = ReadPort1.ReadLine.ToString
-                    SensorNumber = CLng(ArduinoReading.Substring(0, 1))
-                    VoltageReading = CLng(ArduinoReading.Substring(1))
-                    Select Case SensorNumber
-                        Case 1
-                            Call Plot_Chart(Sensor1, ReadPort1, StomachPH, TextBox18, VoltageReading, 0)
-                            Call Plot_Chart(Sensor1, ReadPort1, StomachPHAuto, TextBox16, VoltageReading, 0)
-                        Case 2
-                            Call Plot_Chart(Sensor2, ReadPort1, SmallIntestinePH, TextBox19, VoltageReading, 0)
-                            Call Plot_Chart(Sensor2, ReadPort1, SmallIntestinePHAuto, TextBox17, VoltageReading, 0)
-                        Case 3
-                            Call Plot_Chart(Sensor3, ReadPort1, ColonPH, TextBox20, VoltageReading, 0)
-                            Call Plot_Chart(Sensor3, ReadPort1, ColonPHAuto, TextBox21, VoltageReading, 0)
-                        Case 4
-                            Call Plot_Chart(Sensor4, ReadPort1, Colon2PH, TextBox27, VoltageReading, 0)
+                    Try
+                        ArduinoReading = ReadPort1.ReadLine.ToString
+                        SensorNumber = CLng(ArduinoReading.Substring(0, 1))
+                        VoltageReading = CLng(ArduinoReading.Substring(1))
+                        Select Case SensorNumber
+                            Case 1
+                                Call Plot_Chart(Sensor1, ReadPort1, StomachPH, TextBox18, VoltageReading, 0)
+                                Call Plot_Chart(Sensor1, ReadPort1, StomachPHAuto, TextBox16, VoltageReading, 0)
+                            Case 2
+                                Call Plot_Chart(Sensor2, ReadPort1, SmallIntestinePH, TextBox19, VoltageReading, 0)
+                                Call Plot_Chart(Sensor2, ReadPort1, SmallIntestinePHAuto, TextBox17, VoltageReading, 0)
+                            Case 3
+                                Call Plot_Chart(Sensor3, ReadPort1, ColonPH, TextBox20, VoltageReading, 0)
+                                Call Plot_Chart(Sensor3, ReadPort1, ColonPHAuto, TextBox21, VoltageReading, 0)
+                            Case 4
+                                Call Plot_Chart(Sensor4, ReadPort1, Colon2PH, TextBox27, VoltageReading, 0)
                             'Call Plot_Chart(Sensor4, ReadPort1, Colon2PHAuto, TextBox27, VoltageReading, 0)
-                        Case 5
-                            Call Plot_Chart(Sensor5, ReadPort1, Colon3PH, TextBox28, VoltageReading, 0)
-                            'Call Plot_Chart(Sensor3, ReadPort1, Colon3PHAuto, TextBox28, VoltageReading, 0)
-                    End Select
+                            Case 5
+                                Call Plot_Chart(Sensor5, ReadPort1, Colon3PH, TextBox28, VoltageReading, 0)
+                                'Call Plot_Chart(Sensor3, ReadPort1, Colon3PHAuto, TextBox28, VoltageReading, 0)
+                        End Select
+                    Catch
+                        ArduinoReading = ""
+                        SensorNumber = 0
+                        VoltageReading = 0
+                    End Try
                 End If
             Catch
             End Try
         End If
         If tick Mod 50 = 0 Then
-            ReadPort1.DiscardInBuffer() 'This is VERY important! Otherwise readings accumulate in the buffer and you dont get actual real-time reading
+            Try
+                ReadPort1.DiscardInBuffer() 'This is VERY important! Otherwise readings accumulate in the buffer and you dont get actual real-time reading
+                tick = 0
+            Catch
+            End Try
         End If
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        'This timer deals with controller and automatic adjustment of PH'
+        tick2 += 1
+        If tick2 Mod 5 = 0 Then
+            Try
+                Select Case SensorNumber
+                    Case 1
+                        If Sensor1.AutoControlStatus = 1 Then
+                            If IsNumeric(Setpoint1_Textbox.Text) = False Then
+                                MsgBox("Setpoint error!" & vbCrLf & "Defaulted to 7")
+                                Setpoint1_Textbox.Text = "7.0"
+                            End If
+                            Call PID_Controller(VoltageReading, CDbl(Setpoint1_Textbox.Text), Pump1, Pump2, -0.2, 0.2) 'Temporary, for testing only                           
+                            'Implement pump discharge
+                            Call Pump_Auto_Control(Pump1, OutputPort1, "1011")
+                            Call Pump_Auto_Control(Pump2, OutputPort1, "1021")
+                        End If
+                    Case 2
+
+                    Case 3
+
+                    Case 4
+
+                    Case 5
+
+                End Select
+            Catch
+            End Try
+        End If
+
     End Sub
 
     'The following buttons handle the three charts'
@@ -373,7 +414,14 @@ Public Class Form
     End Sub
 
     Private Sub Button42_Click(sender As Object, e As EventArgs) Handles Button42.Click
-        'Button for PID Controller'
+        'Button for auto PH control for PH sensor 1'
+        If Sensor1.AutoControlStatus = 0 Then
+            Sensor1.AutoControlStatus = 1
+            Button42.Text = "Disable Controller"
+        Else
+            Sensor1.AutoControlStatus = 0
+            Button42.Text = "Enable Controller"
+        End If
     End Sub
 
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -467,7 +515,7 @@ Public Class Form
 
     Function Plot_Chart(input_sensor As pHsensor, input_port As System.IO.Ports.SerialPort, output_chart As System.Windows.Forms.DataVisualization.Charting.Chart, output_textbox As TextBox, input_number As Long, serie_number As Integer)
         'This function plots the computed reading from sensors into charts
-        If input_sensor.Status = 1 Then
+        If input_sensor.PlotStatus = 1 Then
             input_sensor.Timer += 1
             Try
                 input_sensor.Reading = PH_Calculations(input_number) 'Note that here Arduino directly sent a number, not a string
@@ -483,12 +531,12 @@ Public Class Form
     End Function
 
     Function Plot_ONOFF(input_sensor As pHsensor, input_button As Button)
-        If input_sensor.Status = 1 Then
+        If input_sensor.PlotStatus = 1 Then
             input_button.Text = "Enable"
-            input_sensor.Status = 0
+            input_sensor.PlotStatus = 0
         Else
             input_button.Text = "Disable"
-            input_sensor.Status = 1
+            input_sensor.PlotStatus = 1
         End If
         Plot_ONOFF = True
     End Function
@@ -501,9 +549,37 @@ Public Class Form
         Plot_Reset = True
     End Function
 
-    Function PID_Controller(input_PH As Integer, output_valve As Valve, output_port As System.IO.Ports.SerialPort, output_textbox As TextBox)
-        'Not done yet'
+    Function PID_Controller(input_voltage As Double, setpoint As Double, output_pump_acid As Pump, output_pump_base As Pump, tolerance_acid As Double, tolerance_base As Double)
+        'This PID controller works with pumps, but to use solenoid valves you just need to switch the pump here to valves'
+        'Currently it only works with P, because with ON/OFF control PID doesnt really make any sense anyways...'
+        'Here setpoint should be in actual PH instead of voltage'
+        Dim errorterm As Double
+        errorterm = setpoint - PH_Calculations(input_voltage)
+        If errorterm < tolerance_acid Then
+            output_pump_acid.State = 1
+        Else
+            output_pump_acid.State = 0
+        End If
+        If errorterm > tolerance_base Then
+            output_pump_base.State = 1
+        Else
+            output_pump_base.State = 0
+        End If
         PID_Controller = True
+    End Function
+
+    Function Pump_Auto_Control(input_pump As Pump, output_port As System.IO.Ports.SerialPort, output_text As String)
+        'This is to implement a pump discharge/stop command generated by PID controller
+        If (input_pump.State = 1) Then
+            input_pump.StateStr = "On"
+        Else
+            input_pump.StateStr = "Off"
+        End If
+        Try
+            output_port.WriteLine(input_pump.State.ToString & output_text) 'The output_text is the device specific code to the serial and Arduino'
+        Catch
+        End Try
+        Pump_Auto_Control = True
     End Function
 
 
