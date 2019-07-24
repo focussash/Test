@@ -26,29 +26,35 @@ Partial Class Form
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series11 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TestChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TestTextbox = New System.Windows.Forms.TextBox()
         Me.RandomTesting2 = New System.Windows.Forms.Button()
         Me.Random_Testing = New System.Windows.Forms.Button()
@@ -191,6 +197,20 @@ Partial Class Form
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button46 = New System.Windows.Forms.Button()
+        Me.Button45 = New System.Windows.Forms.Button()
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Button44 = New System.Windows.Forms.Button()
+        Me.Setpoint3_Textbox = New System.Windows.Forms.TextBox()
+        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Button43 = New System.Windows.Forms.Button()
+        Me.Setpoint2_Textbox = New System.Windows.Forms.TextBox()
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Button42 = New System.Windows.Forms.Button()
+        Me.Setpoint1_Textbox = New System.Windows.Forms.TextBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.Button32 = New System.Windows.Forms.Button()
@@ -203,14 +223,18 @@ Partial Class Form
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.Button24 = New System.Windows.Forms.Button()
         Me.StomachPHAuto = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.OutputPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.ReadPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.ReadPort2 = New System.IO.Ports.SerialPort(Me.components)
         Me.ReadPort3 = New System.IO.Ports.SerialPort(Me.components)
-        Me.Button42 = New System.Windows.Forms.Button()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.TestTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        CType(Me.TestChart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.Colon3PH, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -254,6 +278,9 @@ Partial Class Form
         Me.Panel1.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         CType(Me.ColonPHAuto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox9.SuspendLayout()
@@ -267,6 +294,7 @@ Partial Class Form
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.ItemSize = New System.Drawing.Size(150, 21)
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
@@ -278,6 +306,7 @@ Partial Class Form
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage3.Controls.Add(Me.TestChart)
         Me.TabPage3.Controls.Add(Me.TestTextbox)
         Me.TabPage3.Controls.Add(Me.RandomTesting2)
         Me.TabPage3.Controls.Add(Me.Random_Testing)
@@ -297,6 +326,29 @@ Partial Class Form
         Me.TabPage3.Size = New System.Drawing.Size(1904, 1025)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Setup"
+        '
+        'TestChart
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.TestChart.ChartAreas.Add(ChartArea1)
+        Legend1.Enabled = False
+        Legend1.Name = "Legend1"
+        Me.TestChart.Legends.Add(Legend1)
+        Me.TestChart.Location = New System.Drawing.Point(834, 128)
+        Me.TestChart.Name = "TestChart"
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Enabled = False
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series2"
+        Me.TestChart.Series.Add(Series1)
+        Me.TestChart.Series.Add(Series2)
+        Me.TestChart.Size = New System.Drawing.Size(419, 121)
+        Me.TestChart.TabIndex = 14
+        Me.TestChart.Text = "Chart1"
         '
         'TestTextbox
         '
@@ -330,7 +382,7 @@ Partial Class Form
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(63, 15)
         Me.Label22.TabIndex = 10
-        Me.Label22.Text = "*50 ms "
+        Me.Label22.Text = "seconds"
         '
         'Sensor_Time_Interval
         '
@@ -492,20 +544,20 @@ Partial Class Form
         '
         'Colon3PH
         '
-        ChartArea1.AxisY.Maximum = 14.0R
-        ChartArea1.AxisY.Minimum = 0R
-        ChartArea1.Name = "ChartArea1"
-        Me.Colon3PH.ChartAreas.Add(ChartArea1)
-        Legend1.Enabled = False
-        Legend1.Name = "Legend1"
-        Me.Colon3PH.Legends.Add(Legend1)
+        ChartArea2.AxisY.Maximum = 14.0R
+        ChartArea2.AxisY.Minimum = 0R
+        ChartArea2.Name = "ChartArea1"
+        Me.Colon3PH.ChartAreas.Add(ChartArea2)
+        Legend2.Enabled = False
+        Legend2.Name = "Legend1"
+        Me.Colon3PH.Legends.Add(Legend2)
         Me.Colon3PH.Location = New System.Drawing.Point(1427, 39)
         Me.Colon3PH.Name = "Colon3PH"
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Colon3PH.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Colon3PH.Series.Add(Series3)
         Me.Colon3PH.Size = New System.Drawing.Size(337, 291)
         Me.Colon3PH.TabIndex = 29
         Me.Colon3PH.Text = "Chart3"
@@ -546,20 +598,20 @@ Partial Class Form
         '
         'Colon2PH
         '
-        ChartArea2.AxisY.Maximum = 14.0R
-        ChartArea2.AxisY.Minimum = 0R
-        ChartArea2.Name = "ChartArea1"
-        Me.Colon2PH.ChartAreas.Add(ChartArea2)
-        Legend2.Enabled = False
-        Legend2.Name = "Legend1"
-        Me.Colon2PH.Legends.Add(Legend2)
+        ChartArea3.AxisY.Maximum = 14.0R
+        ChartArea3.AxisY.Minimum = 0R
+        ChartArea3.Name = "ChartArea1"
+        Me.Colon2PH.ChartAreas.Add(ChartArea3)
+        Legend3.Enabled = False
+        Legend3.Name = "Legend1"
+        Me.Colon2PH.Legends.Add(Legend3)
         Me.Colon2PH.Location = New System.Drawing.Point(1075, 39)
         Me.Colon2PH.Name = "Colon2PH"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Colon2PH.Series.Add(Series2)
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Colon2PH.Series.Add(Series4)
         Me.Colon2PH.Size = New System.Drawing.Size(345, 291)
         Me.Colon2PH.TabIndex = 24
         Me.Colon2PH.Text = "Chart3"
@@ -576,7 +628,7 @@ Partial Class Form
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Panel13)
         Me.GroupBox3.Controls.Add(Me.Panel12)
-        Me.GroupBox3.Location = New System.Drawing.Point(1421, 504)
+        Me.GroupBox3.Location = New System.Drawing.Point(20, 493)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(465, 183)
         Me.GroupBox3.TabIndex = 2
@@ -752,7 +804,7 @@ Partial Class Form
         '
         'Button28
         '
-        Me.Button28.Location = New System.Drawing.Point(221, 367)
+        Me.Button28.Location = New System.Drawing.Point(227, 367)
         Me.Button28.Name = "Button28"
         Me.Button28.Size = New System.Drawing.Size(109, 27)
         Me.Button28.TabIndex = 18
@@ -779,7 +831,7 @@ Partial Class Form
         '
         'Button25
         '
-        Me.Button25.Location = New System.Drawing.Point(78, 367)
+        Me.Button25.Location = New System.Drawing.Point(69, 367)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(109, 27)
         Me.Button25.TabIndex = 15
@@ -797,20 +849,20 @@ Partial Class Form
         '
         'ColonPH
         '
-        ChartArea3.AxisY.Maximum = 14.0R
-        ChartArea3.AxisY.Minimum = 0R
-        ChartArea3.Name = "ChartArea1"
-        Me.ColonPH.ChartAreas.Add(ChartArea3)
-        Legend3.Enabled = False
-        Legend3.Name = "Legend1"
-        Me.ColonPH.Legends.Add(Legend3)
+        ChartArea4.AxisY.Maximum = 14.0R
+        ChartArea4.AxisY.Minimum = 0R
+        ChartArea4.Name = "ChartArea1"
+        Me.ColonPH.ChartAreas.Add(ChartArea4)
+        Legend4.Enabled = False
+        Legend4.Name = "Legend1"
+        Me.ColonPH.Legends.Add(Legend4)
         Me.ColonPH.Location = New System.Drawing.Point(731, 39)
         Me.ColonPH.Name = "ColonPH"
-        Series3.ChartArea = "ChartArea1"
-        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.ColonPH.Series.Add(Series3)
+        Series5.ChartArea = "ChartArea1"
+        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series5.Legend = "Legend1"
+        Series5.Name = "Series1"
+        Me.ColonPH.Series.Add(Series5)
         Me.ColonPH.Size = New System.Drawing.Size(338, 291)
         Me.ColonPH.TabIndex = 13
         Me.ColonPH.Text = "Chart3"
@@ -826,20 +878,20 @@ Partial Class Form
         '
         'SmallIntestinePH
         '
-        ChartArea4.AxisY.Maximum = 14.0R
-        ChartArea4.AxisY.Minimum = 0R
-        ChartArea4.Name = "ChartArea1"
-        Me.SmallIntestinePH.ChartAreas.Add(ChartArea4)
-        Legend4.Enabled = False
-        Legend4.Name = "Legend1"
-        Me.SmallIntestinePH.Legends.Add(Legend4)
+        ChartArea5.AxisY.Maximum = 14.0R
+        ChartArea5.AxisY.Minimum = 0R
+        ChartArea5.Name = "ChartArea1"
+        Me.SmallIntestinePH.ChartAreas.Add(ChartArea5)
+        Legend5.Enabled = False
+        Legend5.Name = "Legend1"
+        Me.SmallIntestinePH.Legends.Add(Legend5)
         Me.SmallIntestinePH.Location = New System.Drawing.Point(368, 39)
         Me.SmallIntestinePH.Name = "SmallIntestinePH"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        Me.SmallIntestinePH.Series.Add(Series4)
+        Series6.ChartArea = "ChartArea1"
+        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series6.Legend = "Legend1"
+        Series6.Name = "Series1"
+        Me.SmallIntestinePH.Series.Add(Series6)
         Me.SmallIntestinePH.Size = New System.Drawing.Size(357, 291)
         Me.SmallIntestinePH.TabIndex = 11
         Me.SmallIntestinePH.Text = "Chart2"
@@ -855,20 +907,26 @@ Partial Class Form
         '
         'StomachPH
         '
-        ChartArea5.AxisY.Maximum = 14.0R
-        ChartArea5.AxisY.Minimum = 0R
-        ChartArea5.Name = "ChartArea1"
-        Me.StomachPH.ChartAreas.Add(ChartArea5)
-        Legend5.Enabled = False
-        Legend5.Name = "Legend1"
-        Me.StomachPH.Legends.Add(Legend5)
+        ChartArea6.AxisY.Maximum = 14.0R
+        ChartArea6.AxisY.Minimum = 0R
+        ChartArea6.Name = "ChartArea1"
+        Me.StomachPH.ChartAreas.Add(ChartArea6)
+        Legend6.Enabled = False
+        Legend6.Name = "Legend1"
+        Me.StomachPH.Legends.Add(Legend6)
         Me.StomachPH.Location = New System.Drawing.Point(12, 39)
         Me.StomachPH.Name = "StomachPH"
-        Series5.ChartArea = "ChartArea1"
-        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Me.StomachPH.Series.Add(Series5)
+        Series7.ChartArea = "ChartArea1"
+        Series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series7.Legend = "Legend1"
+        Series7.Name = "Series1"
+        Series8.ChartArea = "ChartArea1"
+        Series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point
+        Series8.Enabled = False
+        Series8.Legend = "Legend1"
+        Series8.Name = "Series2"
+        Me.StomachPH.Series.Add(Series7)
+        Me.StomachPH.Series.Add(Series8)
         Me.StomachPH.Size = New System.Drawing.Size(350, 291)
         Me.StomachPH.TabIndex = 1
         Me.StomachPH.Text = "Chart1"
@@ -1650,7 +1708,11 @@ Partial Class Form
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.TabPage2.Controls.Add(Me.Button42)
+        Me.TabPage2.Controls.Add(Me.Button46)
+        Me.TabPage2.Controls.Add(Me.Button45)
+        Me.TabPage2.Controls.Add(Me.GroupBox13)
+        Me.TabPage2.Controls.Add(Me.GroupBox12)
+        Me.TabPage2.Controls.Add(Me.GroupBox11)
         Me.TabPage2.Controls.Add(Me.GroupBox10)
         Me.TabPage2.Controls.Add(Me.GroupBox9)
         Me.TabPage2.Controls.Add(Me.GroupBox8)
@@ -1661,28 +1723,157 @@ Partial Class Form
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Automatic Control"
         '
+        'Button46
+        '
+        Me.Button46.Location = New System.Drawing.Point(106, 264)
+        Me.Button46.Name = "Button46"
+        Me.Button46.Size = New System.Drawing.Size(201, 40)
+        Me.Button46.TabIndex = 10
+        Me.Button46.Text = "Enable Feeding Cycle"
+        Me.Button46.UseVisualStyleBackColor = True
+        '
+        'Button45
+        '
+        Me.Button45.Location = New System.Drawing.Point(104, 197)
+        Me.Button45.Name = "Button45"
+        Me.Button45.Size = New System.Drawing.Size(204, 36)
+        Me.Button45.TabIndex = 9
+        Me.Button45.Text = "Export PH Log"
+        Me.Button45.UseVisualStyleBackColor = True
+        '
+        'GroupBox13
+        '
+        Me.GroupBox13.Controls.Add(Me.Label32)
+        Me.GroupBox13.Controls.Add(Me.Button44)
+        Me.GroupBox13.Controls.Add(Me.Setpoint3_Textbox)
+        Me.GroupBox13.Location = New System.Drawing.Point(6, 124)
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.Size = New System.Drawing.Size(431, 54)
+        Me.GroupBox13.TabIndex = 8
+        Me.GroupBox13.TabStop = False
+        Me.GroupBox13.Text = "Colon 1"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(6, 21)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(71, 15)
+        Me.Label32.TabIndex = 4
+        Me.Label32.Text = "Setpoint"
+        '
+        'Button44
+        '
+        Me.Button44.Location = New System.Drawing.Point(207, 14)
+        Me.Button44.Name = "Button44"
+        Me.Button44.Size = New System.Drawing.Size(204, 28)
+        Me.Button44.TabIndex = 3
+        Me.Button44.Text = "Enable Controller"
+        Me.Button44.UseVisualStyleBackColor = True
+        '
+        'Setpoint3_Textbox
+        '
+        Me.Setpoint3_Textbox.Location = New System.Drawing.Point(83, 17)
+        Me.Setpoint3_Textbox.Name = "Setpoint3_Textbox"
+        Me.Setpoint3_Textbox.Size = New System.Drawing.Size(103, 25)
+        Me.Setpoint3_Textbox.TabIndex = 5
+        '
+        'GroupBox12
+        '
+        Me.GroupBox12.Controls.Add(Me.Label31)
+        Me.GroupBox12.Controls.Add(Me.Button43)
+        Me.GroupBox12.Controls.Add(Me.Setpoint2_Textbox)
+        Me.GroupBox12.Location = New System.Drawing.Point(6, 64)
+        Me.GroupBox12.Name = "GroupBox12"
+        Me.GroupBox12.Size = New System.Drawing.Size(431, 54)
+        Me.GroupBox12.TabIndex = 7
+        Me.GroupBox12.TabStop = False
+        Me.GroupBox12.Text = "Small Intestine"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(6, 21)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(71, 15)
+        Me.Label31.TabIndex = 4
+        Me.Label31.Text = "Setpoint"
+        '
+        'Button43
+        '
+        Me.Button43.Location = New System.Drawing.Point(207, 14)
+        Me.Button43.Name = "Button43"
+        Me.Button43.Size = New System.Drawing.Size(204, 28)
+        Me.Button43.TabIndex = 3
+        Me.Button43.Text = "Enable Controller"
+        Me.Button43.UseVisualStyleBackColor = True
+        '
+        'Setpoint2_Textbox
+        '
+        Me.Setpoint2_Textbox.Location = New System.Drawing.Point(83, 17)
+        Me.Setpoint2_Textbox.Name = "Setpoint2_Textbox"
+        Me.Setpoint2_Textbox.Size = New System.Drawing.Size(103, 25)
+        Me.Setpoint2_Textbox.TabIndex = 5
+        '
+        'GroupBox11
+        '
+        Me.GroupBox11.Controls.Add(Me.Label30)
+        Me.GroupBox11.Controls.Add(Me.Button42)
+        Me.GroupBox11.Controls.Add(Me.Setpoint1_Textbox)
+        Me.GroupBox11.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox11.Name = "GroupBox11"
+        Me.GroupBox11.Size = New System.Drawing.Size(431, 54)
+        Me.GroupBox11.TabIndex = 6
+        Me.GroupBox11.TabStop = False
+        Me.GroupBox11.Text = "Stomach"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(6, 21)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(71, 15)
+        Me.Label30.TabIndex = 4
+        Me.Label30.Text = "Setpoint"
+        '
+        'Button42
+        '
+        Me.Button42.Location = New System.Drawing.Point(207, 14)
+        Me.Button42.Name = "Button42"
+        Me.Button42.Size = New System.Drawing.Size(204, 28)
+        Me.Button42.TabIndex = 3
+        Me.Button42.Text = "Enable Controller"
+        Me.Button42.UseVisualStyleBackColor = True
+        '
+        'Setpoint1_Textbox
+        '
+        Me.Setpoint1_Textbox.Location = New System.Drawing.Point(83, 17)
+        Me.Setpoint1_Textbox.Name = "Setpoint1_Textbox"
+        Me.Setpoint1_Textbox.Size = New System.Drawing.Size(103, 25)
+        Me.Setpoint1_Textbox.TabIndex = 5
+        '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.TextBox21)
         Me.GroupBox10.Controls.Add(Me.Button32)
         Me.GroupBox10.Controls.Add(Me.ColonPHAuto)
-        Me.GroupBox10.Location = New System.Drawing.Point(6, 662)
+        Me.GroupBox10.Location = New System.Drawing.Point(879, 23)
         Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Size = New System.Drawing.Size(1257, 309)
+        Me.GroupBox10.Size = New System.Drawing.Size(298, 309)
         Me.GroupBox10.TabIndex = 2
         Me.GroupBox10.TabStop = False
         Me.GroupBox10.Text = "Colon PH"
         '
         'TextBox21
         '
-        Me.TextBox21.Location = New System.Drawing.Point(377, 278)
+        Me.TextBox21.Location = New System.Drawing.Point(138, 276)
         Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(142, 25)
+        Me.TextBox21.Size = New System.Drawing.Size(92, 25)
         Me.TextBox21.TabIndex = 21
         '
         'Button32
         '
-        Me.Button32.Location = New System.Drawing.Point(147, 280)
+        Me.Button32.Location = New System.Drawing.Point(23, 276)
         Me.Button32.Name = "Button32"
         Me.Button32.Size = New System.Drawing.Size(109, 27)
         Me.Button32.TabIndex = 20
@@ -1691,21 +1882,21 @@ Partial Class Form
         '
         'ColonPHAuto
         '
-        ChartArea6.AxisY.Maximum = 14.0R
-        ChartArea6.AxisY.Minimum = 0R
-        ChartArea6.Name = "ChartArea1"
-        Me.ColonPHAuto.ChartAreas.Add(ChartArea6)
-        Legend6.Enabled = False
-        Legend6.Name = "Legend1"
-        Me.ColonPHAuto.Legends.Add(Legend6)
+        ChartArea7.AxisY.Maximum = 14.0R
+        ChartArea7.AxisY.Minimum = 0R
+        ChartArea7.Name = "ChartArea1"
+        Me.ColonPHAuto.ChartAreas.Add(ChartArea7)
+        Legend7.Enabled = False
+        Legend7.Name = "Legend1"
+        Me.ColonPHAuto.Legends.Add(Legend7)
         Me.ColonPHAuto.Location = New System.Drawing.Point(6, 24)
         Me.ColonPHAuto.Name = "ColonPHAuto"
-        Series6.ChartArea = "ChartArea1"
-        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series1"
-        Me.ColonPHAuto.Series.Add(Series6)
-        Me.ColonPHAuto.Size = New System.Drawing.Size(695, 250)
+        Series9.ChartArea = "ChartArea1"
+        Series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series9.Legend = "Legend1"
+        Series9.Name = "Series1"
+        Me.ColonPHAuto.Series.Add(Series9)
+        Me.ColonPHAuto.Size = New System.Drawing.Size(272, 250)
         Me.ColonPHAuto.TabIndex = 4
         Me.ColonPHAuto.Text = "Chart3"
         '
@@ -1714,23 +1905,23 @@ Partial Class Form
         Me.GroupBox9.Controls.Add(Me.TextBox17)
         Me.GroupBox9.Controls.Add(Me.Button31)
         Me.GroupBox9.Controls.Add(Me.SmallIntestinePHAuto)
-        Me.GroupBox9.Location = New System.Drawing.Point(15, 346)
+        Me.GroupBox9.Location = New System.Drawing.Point(1204, 27)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(1257, 310)
+        Me.GroupBox9.Size = New System.Drawing.Size(279, 310)
         Me.GroupBox9.TabIndex = 1
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Small Intestine PH"
         '
         'TextBox17
         '
-        Me.TextBox17.Location = New System.Drawing.Point(377, 277)
+        Me.TextBox17.Location = New System.Drawing.Point(125, 277)
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.Size = New System.Drawing.Size(142, 25)
         Me.TextBox17.TabIndex = 20
         '
         'Button31
         '
-        Me.Button31.Location = New System.Drawing.Point(147, 277)
+        Me.Button31.Location = New System.Drawing.Point(6, 277)
         Me.Button31.Name = "Button31"
         Me.Button31.Size = New System.Drawing.Size(109, 27)
         Me.Button31.TabIndex = 19
@@ -1739,21 +1930,21 @@ Partial Class Form
         '
         'SmallIntestinePHAuto
         '
-        ChartArea7.AxisY.Maximum = 14.0R
-        ChartArea7.AxisY.Minimum = 0R
-        ChartArea7.Name = "ChartArea1"
-        Me.SmallIntestinePHAuto.ChartAreas.Add(ChartArea7)
-        Legend7.Enabled = False
-        Legend7.Name = "Legend1"
-        Me.SmallIntestinePHAuto.Legends.Add(Legend7)
+        ChartArea8.AxisY.Maximum = 14.0R
+        ChartArea8.AxisY.Minimum = 0R
+        ChartArea8.Name = "ChartArea1"
+        Me.SmallIntestinePHAuto.ChartAreas.Add(ChartArea8)
+        Legend8.Enabled = False
+        Legend8.Name = "Legend1"
+        Me.SmallIntestinePHAuto.Legends.Add(Legend8)
         Me.SmallIntestinePHAuto.Location = New System.Drawing.Point(6, 24)
         Me.SmallIntestinePHAuto.Name = "SmallIntestinePHAuto"
-        Series7.ChartArea = "ChartArea1"
-        Series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series7.Legend = "Legend1"
-        Series7.Name = "Series1"
-        Me.SmallIntestinePHAuto.Series.Add(Series7)
-        Me.SmallIntestinePHAuto.Size = New System.Drawing.Size(695, 250)
+        Series10.ChartArea = "ChartArea1"
+        Series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series10.Legend = "Legend1"
+        Series10.Name = "Series1"
+        Me.SmallIntestinePHAuto.Series.Add(Series10)
+        Me.SmallIntestinePHAuto.Size = New System.Drawing.Size(261, 250)
         Me.SmallIntestinePHAuto.TabIndex = 3
         Me.SmallIntestinePHAuto.Text = "Chart2"
         '
@@ -1762,23 +1953,23 @@ Partial Class Form
         Me.GroupBox8.Controls.Add(Me.TextBox16)
         Me.GroupBox8.Controls.Add(Me.Button24)
         Me.GroupBox8.Controls.Add(Me.StomachPHAuto)
-        Me.GroupBox8.Location = New System.Drawing.Point(12, 51)
+        Me.GroupBox8.Location = New System.Drawing.Point(547, 27)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(1257, 289)
+        Me.GroupBox8.Size = New System.Drawing.Size(316, 289)
         Me.GroupBox8.TabIndex = 0
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Stomach PH"
         '
         'TextBox16
         '
-        Me.TextBox16.Location = New System.Drawing.Point(377, 256)
+        Me.TextBox16.Location = New System.Drawing.Point(167, 256)
         Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(142, 25)
+        Me.TextBox16.Size = New System.Drawing.Size(73, 25)
         Me.TextBox16.TabIndex = 19
         '
         'Button24
         '
-        Me.Button24.Location = New System.Drawing.Point(147, 256)
+        Me.Button24.Location = New System.Drawing.Point(18, 256)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(109, 27)
         Me.Button24.TabIndex = 18
@@ -1787,37 +1978,51 @@ Partial Class Form
         '
         'StomachPHAuto
         '
-        ChartArea8.AxisY.Maximum = 14.0R
-        ChartArea8.AxisY.Minimum = 0R
-        ChartArea8.Name = "ChartArea1"
-        Me.StomachPHAuto.ChartAreas.Add(ChartArea8)
-        Legend8.Enabled = False
-        Legend8.Name = "Legend1"
-        Me.StomachPHAuto.Legends.Add(Legend8)
+        ChartArea9.AxisY.Maximum = 14.0R
+        ChartArea9.AxisY.Minimum = 0R
+        ChartArea9.Name = "ChartArea1"
+        Me.StomachPHAuto.ChartAreas.Add(ChartArea9)
+        Legend9.Enabled = False
+        Legend9.Name = "Legend1"
+        Me.StomachPHAuto.Legends.Add(Legend9)
         Me.StomachPHAuto.Location = New System.Drawing.Point(6, 24)
         Me.StomachPHAuto.Name = "StomachPHAuto"
-        Series8.ChartArea = "ChartArea1"
-        Series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series8.Legend = "Legend1"
-        Series8.Name = "Series1"
-        Me.StomachPHAuto.Series.Add(Series8)
-        Me.StomachPHAuto.Size = New System.Drawing.Size(691, 226)
+        Series11.ChartArea = "ChartArea1"
+        Series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series11.Legend = "Legend1"
+        Series11.Name = "Series1"
+        Me.StomachPHAuto.Series.Add(Series11)
+        Me.StomachPHAuto.Size = New System.Drawing.Size(293, 226)
         Me.StomachPHAuto.TabIndex = 2
         Me.StomachPHAuto.Text = "Chart1"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(1904, 1025)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Random stuff"
         '
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 1000
+        Me.Timer1.Interval = 500
         '
-        'Button42
+        'Timer2
         '
-        Me.Button42.Location = New System.Drawing.Point(30, 6)
-        Me.Button42.Name = "Button42"
-        Me.Button42.Size = New System.Drawing.Size(177, 36)
-        Me.Button42.TabIndex = 3
-        Me.Button42.Text = "Enable Controller"
-        Me.Button42.UseVisualStyleBackColor = True
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 200
+        '
+        'TestTimer
+        '
+        Me.TestTimer.Enabled = True
+        '
+        'Timer3
+        '
+        Me.Timer3.Interval = 1000
         '
         'Form
         '
@@ -1830,6 +2035,7 @@ Partial Class Form
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        CType(Me.TestChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
@@ -1893,6 +2099,12 @@ Partial Class Form
         Me.Panel1.PerformLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
+        Me.GroupBox13.ResumeLayout(False)
+        Me.GroupBox13.PerformLayout()
+        Me.GroupBox12.ResumeLayout(False)
+        Me.GroupBox12.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
+        Me.GroupBox11.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
         CType(Me.ColonPHAuto, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2068,4 +2280,22 @@ Partial Class Form
     Friend WithEvents Label28 As Label
     Friend WithEvents Colon2PH As DataVisualization.Charting.Chart
     Friend WithEvents Button42 As Button
+    Friend WithEvents Setpoint1_Textbox As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents GroupBox11 As GroupBox
+    Friend WithEvents GroupBox12 As GroupBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Button43 As Button
+    Friend WithEvents Setpoint2_Textbox As TextBox
+    Friend WithEvents GroupBox13 As GroupBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Button44 As Button
+    Friend WithEvents Setpoint3_Textbox As TextBox
+    Friend WithEvents TestChart As DataVisualization.Charting.Chart
+    Friend WithEvents TestTimer As Timer
+    Friend WithEvents Button45 As Button
+    Friend WithEvents Timer3 As Timer
+    Friend WithEvents Button46 As Button
+    Friend WithEvents TabPage4 As TabPage
 End Class
